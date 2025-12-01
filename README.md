@@ -10,11 +10,11 @@ Points Breakdown:
 - The application will include separate frontend and backend components, server-side validation, dynamic database operations, and complete documentation.
 
 # The 5 W's
-- Who: This application is designed for employees and managers of a cr parts store, including inventory clerks, counter staff, and store managers who need quick access to stock and product information
-- What: The system will be a web based inventory management application that allows users to view, add, edit, and delete car parts, track stock levels, search for specific items, and manage supplier relationships. It provides a centralized location to store and update all inventory related data
-- When: The system is used daily during store operations whenever staff need to check stock, receive shipments, adjust quantities, or assist customers by looking up parts
-- Where: The application will be hosted on Hostinger, allowing authorized users to access it from store computers, office desktops, or approved remote locations
-- Why: Car parts stores handle extensive inventories with frequent stock changes. Manual tracking can lead to errors, shortages, and lost sales. This system streamlines inventory control, reduces mistakes, improves efficiency, provides real time stock visibility, and supports better decision making for restocking and sales operations
+- **Who**: This application is designed for employees and managers of a cr parts store, including inventory clerks, counter staff, and store managers who need quick access to stock and product information
+- **What**: The system will be a web based inventory management application that allows users to view, add, edit, and delete car parts, track stock levels, search for specific items, and manage supplier relationships. It provides a centralized location to store and update all inventory related data
+- **When**: The system is used daily during store operations whenever staff need to check stock, receive shipments, adjust quantities, or assist customers by looking up parts
+- **Where**: The application will be hosted on Hostinger, allowing authorized users to access it from store computers, office desktops, or approved remote locations
+- **Why**: Car parts stores handle extensive inventories with frequent stock changes. Manual tracking can lead to errors, shortages, and lost sales. This system streamlines inventory control, reduces mistakes, improves efficiency, provides real time stock visibility, and supports better decision making for restocking and sales operations
 
 # Project Goals
 • Make sure we implement CRUD operations
