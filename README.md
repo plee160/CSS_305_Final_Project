@@ -10,7 +10,7 @@ Points Breakdown:
 - The application will include separate frontend and backend components, server-side validation, dynamic database operations, and complete documentation.
 
 # The 5 W's
-- **Who**: This application is designed for employees and managers of a cr parts store, including inventory clerks, counter staff, and store managers who need quick access to stock and product information
+- **Who**: This application is designed for employees and managers of a car parts store, including inventory clerks, counter staff, and store managers who need quick access to stock and product information
 - **What**: The system will be a web based inventory management application or catalog that allows users to view, add, edit, and delete car parts, track stock levels, search for specific items, and manage supplier relationships. It provides a centralized location to store and update all inventory related data
 - **When**: The system is used daily during store operations whenever staff need to check stock, receive shipments, adjust quantities, or assist customers by looking up parts
 - **Where**: The application will be hosted on Hostinger, allowing authorized users to access it from store computers, office desktops, or approved remote locations
@@ -45,3 +45,35 @@ This repository will include:
 
 # Development Notes
 This readme will be updated regularly throughout the project to show progress, changes, and final implementation details.
+
+/your-project-root
+│
+├── index.html
+├── styles.css
+├── Readme.docx
+│
+├── /images
+│
+├── /designs
+│
+├── /html
+│   ├── catalog.php
+│   ├── part-details.php
+│   ├── add-part.php
+│   ├── edit-part.php
+│   ├── delete-part.php
+│   ├── suppliers.php
+│   ├── login.php
+│   └── logout.php
+│
+├── /backend
+│   ├── db.php
+│   ├── add_part_handler.php
+│   ├── update_part_handler.php
+│   ├── delete_part_handler.php
+│   ├── authenticate.php
+│   └── session_check.php
+│
+└── /validators
+
+here is waht the folder structure might look like. it is likely to change as we progress
