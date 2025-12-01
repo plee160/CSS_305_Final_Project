@@ -18,11 +18,17 @@ Points Breakdown:
 
 # Project Goals
 • Make sure we implement CRUD operations
+
 • Capture user input and store it in a relational SQL database
+
 • Retrieve data using SQL SELECT statements and display results dynamically on webpages
+
 • Use authentication to protect pages that are restricted
+
 • Test and debug security issues throughout development
+
 • Host the functioning web application using Hostinger
+
 • Make sure everything is documented with a transparent development process
 
 # Repository
