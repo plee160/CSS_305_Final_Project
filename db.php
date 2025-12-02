@@ -1,7 +1,7 @@
 
 <?php 
 $host = "localhost";
-$user = "plee_login";
+$user = "userLogin";
 $password = "GrapeShot9000#";
 $dbname = "login";
 
@@ -11,3 +11,4 @@ if ($conn->connect_error) {
     die("Connection Failed T 3T" . $conn_error);
 
 }
+
