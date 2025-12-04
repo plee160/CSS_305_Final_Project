@@ -3,7 +3,7 @@
     if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         $name = $_POST['username'];
-        $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
+        $password = password_hash($_POST['password'], PASSWORD_BCRYPT);
 
 
         $conn->query("INSERT INTO `login` (`Username`, `User_Password`)
@@ -12,6 +12,7 @@
         header ("Location: index.html");
         exit;
     }
+
 
 
 
