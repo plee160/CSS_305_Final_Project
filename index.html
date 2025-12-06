@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BoyeLeeNaga Shop - Car Parts Catalog</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="body">
+
+<header class="site-header">
+
+    <span class="brand">
+        <span class="brand-mark"></span>
+        <span class="brand-name">BoyeLeeNaga Shop</span>
+    </span>
+
+    <nav class="nav-links">
+        <a href="index.html" class="nav-link active">Home</a>
+        <a href="catalog.php" class="nav-link">Catalog</a>
+        <a href="suppliers.php" class="nav-link">Suppliers</a>
+    </nav>
+
+</header>
+
+<main class="layout">
+
+    <!-- LEFT HERO SECTION -->
+    <section class="hero">
+
+        <h1 class="hero-title">Car Parts Catalog</h1>
+
+        <p class="hero-subtitle">
+            A clean, simple catalog for Boye Lee Naga's mechanic shop.  
+            Track inventory, view suppliers, and find the right part in seconds.
+        </p>
+
+        <section class="hero-actions">
+            <a href="catalog.php" class="btn btn-primary">View Catalog</a>
+            <a href="suppliers.php" class="btn btn-ghost">View Suppliers</a>
+        </section>
+
+        <section class="hero-stats">
+
+            <section class="stat">
+                <span class="stat-number">3</span>
+                <span class="stat-label">Sample Parts</span>
+            </section>
+
+            <section class="stat">
+                <span class="stat-number">2</span>
+                <span class="stat-label">Suppliers</span>
+            </section>
+
+            <section class="stat">
+                <span class="stat-number">1</span>
+                <span class="stat-label">Login</span>
+            </section>
+
+        </section>
+
+    </section>
+
+    <!-- RIGHT LOGIN CARD -->
+    <section class="panel panel-login">
+
+        <h2 class="panel-title">Log In</h2>
+        <p class="panel-text">Sign in to manage parts and view supplier details.</p>
+
+        <form method="post" action="login.php" class="form">
+
+            <label class="field">
+                <span class="field-label">Username</span>
+                <input type="text" name="username" autocomplete="username" required>
+            </label>
+
+            <label class="field">
+                <span class="field-label">Password</span>
+                <input type="password" name="password" autocomplete="current-password" required>
+            </label>
+
+            <section class="form-actions">
+                <button type="submit" class="btn btn-primary full">Sign In</button>
+            </section>
+
+            <section class="form-secondary-actions">
+                <button type="button"
+                        class="link-button"
+                        onclick="location.href='newUser.html'">
+                    Create account
+                </button>
+
+                <button type="button"
+                        class="link-button"
+                        onclick="location.href='User.html'">
+                    Update account
+                </button>
+            </section>
+
+        </form>
+
+        <p class="panel-footnote">
+            This system is for internal use at the mechanic shop as part of 
+            the CSS 305 final project.
+        </p>
+
+    </section>
+
+</main>
+
+<footer class="site-footer">
+    <span>© BoyeLeeNaga · CSS 305 Final Project ·</span>
+</footer>
+
+</body>
+</html>

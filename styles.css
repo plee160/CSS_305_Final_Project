@@ -1,0 +1,316 @@
+/* =====================================================
+   Base Layout
+   ===================================================== */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body.body {
+    margin: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text",
+                 "Segoe UI", sans-serif;
+    color: #111827;
+    background: radial-gradient(circle at top, #fdfdfd 0, #f3f4f6 40%, #e5e7eb 100%);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* =====================================================
+   Header
+   ===================================================== */
+
+.site-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.25rem 5vw;
+    backdrop-filter: blur(20px);
+    background: rgba(255, 255, 255, 0.9);
+    border-bottom: 1px solid rgba(15, 23, 42, 0.06);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+.brand-mark {
+    width: 26px;
+    height: 26px;
+    border-radius: 9px;
+    background: linear-gradient(135deg, #3b82f6, #0ea5e9);
+    box-shadow: 0 6px 15px rgba(37, 99, 235, 0.35);
+}
+
+.brand-name {
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    font-size: 1.1rem;
+}
+
+.nav-links {
+    display: flex;
+    gap: 1.25rem;
+    font-size: 0.95rem;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #4b5563;
+    padding-bottom: 0.15rem;
+    border-bottom: 2px solid transparent;
+    transition: color 0.15s ease, border-color 0.15s ease;
+}
+
+.nav-link:hover {
+    color: #111827;
+}
+
+.nav-link.active {
+    color: #111827;
+    border-color: #111827;
+}
+
+/* =====================================================
+   Main Layout
+   ===================================================== */
+
+.layout {
+    flex: 1;
+    display: grid;
+    grid-template-columns: minmax(0, 1.2fr) minmax(0, 1.4fr); /* more space for table */
+    gap: 3rem;
+    padding: 3rem 8vw;
+}
+
+@media (max-width: 900px) {
+    .layout {
+        grid-template-columns: 1fr;
+        padding: 2rem 6vw 3rem;
+    }
+}
+
+/* Optional single-column wrapper */
+.page-main {
+    flex: 1;
+    padding: 3rem 8vw;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+@media (max-width: 900px) {
+    .page-main {
+        padding: 2rem 6vw 3rem;
+    }
+}
+
+/* =====================================================
+   Hero Section
+   ===================================================== */
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.75rem;
+}
+
+.hero-title {
+    font-size: clamp(2.3rem, 3vw + 1.5rem, 3.2rem);
+    line-height: 1.1;
+    letter-spacing: -0.03em;
+    margin: 0;
+}
+
+.hero-subtitle {
+    font-size: 1.02rem;
+    color: #4b5563;
+    max-width: 34rem;
+    margin: 0.75rem 0 0;
+}
+
+/* =====================================================
+   Panels / Cards
+   ===================================================== */
+
+.panel {
+    align-self: flex-start;
+    padding: 1.8rem 1.9rem 1.6rem;
+    border-radius: 22px;
+    background: rgba(255, 255, 255, 0.96);
+    box-shadow:
+        0 18px 40px rgba(15, 23, 42, 0.15),
+        0 0 0 1px rgba(148, 163, 184, 0.15);
+    width: 100%;
+    overflow: hidden;
+}
+
+.panel-table {
+    max-width: 100%;
+    width: 100%;
+}
+
+.panel-title {
+    margin: 0 0 0.35rem;
+    font-size: 1.25rem;
+}
+
+.panel-text {
+    margin: 0 0 1.1rem;
+    font-size: 0.95rem;
+    color: #4b5563;
+}
+
+/* =====================================================
+   Forms
+   ===================================================== */
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.9rem;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    font-size: 0.9rem;
+}
+
+.field label {
+    font-weight: 500;
+    color: #4b5563;
+}
+
+.field input {
+    border-radius: 10px;
+    border: 1px solid #e5e7eb;
+    padding: 0.55rem 0.75rem;
+    font-size: 0.95rem;
+    background: #f9fafb;
+    transition: 0.15s ease;
+}
+
+.field input:focus {
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.25);
+    background: #ffffff;
+}
+
+/* =====================================================
+   Buttons
+   ===================================================== */
+
+.btn {
+    border-radius: 999px;
+    border: none;
+    cursor: pointer;
+    font-size: 0.92rem;
+    padding: 0.55rem 1.15rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+    transition: 0.15s ease;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #111827, #374151);
+    color: white;
+}
+
+.btn-ghost {
+    background: rgba(255, 255, 255, 0.9);
+    color: #111827;
+    border: 1px solid rgba(148, 163, 184, 0.6);
+}
+
+/* =====================================================
+   Links
+   ===================================================== */
+
+.link-button {
+    font-size: 0.86rem;
+    color: #2563eb;
+    text-decoration: none;
+}
+
+.link-button:hover {
+    text-decoration: underline;
+}
+
+/* =====================================================
+   Table Layout
+   ===================================================== */
+
+.table-wrapper {
+    margin-top: 0.75rem;
+    overflow-x: auto;  /* if it still gets too tight, you can scroll */
+}
+
+.table-wrapper table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.88rem;
+    table-layout: auto;
+}
+
+.table-wrapper thead th {
+    font-weight: 600;
+}
+
+/* keep headers and cells on one line; no “Suppli er” */
+.table-wrapper th,
+.table-wrapper td {
+    padding: 0.6rem 0.9rem;
+    text-align: left;
+    white-space: nowrap;
+    word-break: keep-all;
+}
+
+/* allow first column to wrap (long names) */
+.table-wrapper td:first-child {
+    white-space: normal;
+}
+
+/* Catalog numeric columns (price, qty) right aligned */
+.parts-panel .table-wrapper th:nth-child(4),
+.parts-panel .table-wrapper th:nth-child(5),
+.parts-panel .table-wrapper td:nth-child(4),
+.parts-panel .table-wrapper td:nth-child(5) {
+    text-align: right;
+}
+
+/* Suppliers: centre # of parts, right align last column */
+.suppliers-panel .table-wrapper th:nth-child(5),
+.suppliers-panel .table-wrapper td:nth-child(5) {
+    text-align: center;
+}
+
+.suppliers-panel .table-wrapper th:nth-child(6),
+.suppliers-panel .table-wrapper td:nth-child(6) {
+    text-align: right;
+}
+
+/* =====================================================
+   Footer
+   ===================================================== */
+
+.site-footer {
+    padding: 1rem 5vw 1.4rem;
+    font-size: 0.78rem;
+    text-align: center;
+    color: #9ca3af;
+    background: rgba(255, 255, 255, 0.9);
+    border-top: 1px solid rgba(148, 163, 184, 0.2);
+}

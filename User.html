@@ -1,0 +1,93 @@
+<!--
+I certify that the html file I am submitting is all my own work.
+None of it is copied from any source or any person.
+Signed: Samuel Boye
+Date: 12/06/2025
+Class: CSS 305
+File Name: User.html
+Assignment: Final Project – Car Parts Catalog
+Description: Update account form.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Update account – BoyeLeeNaga Shop</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="body">
+
+<main class="auth-page">
+
+    <section class="panel panel-auth">
+        <h1 class="panel-title">Update account</h1>
+        <p class="panel-text">
+            Update your username, email, or role for this internal system.
+        </p>
+
+        <form method="post" action="userUpdate.php" class="form">
+            <label class="field">
+                <span class="field-label">Current username</span>
+                <input type="text" name="currentName" required>
+            </label>
+
+            <label class="field">
+                <span class="field-label">New username</span>
+                <input type="text" name="newName">
+            </label>
+
+            <label class="field">
+                <span class="field-label">Current email</span>
+                <input type="email" name="currentEmail" required>
+            </label>
+
+            <label class="field">
+                <span class="field-label">New email</span>
+                <input type="email" name="newEmail">
+            </label>
+
+            <label class="field">
+                <span class="field-label">Current role</span>
+                <input type="text" name="currentRole">
+            </label>
+
+            <label class="field">
+                <span class="field-label">New role</span>
+                <select name="newRole">
+                    <option value="">Select role…</option>
+                    <option value="Tier1">Tier1</option>
+                    <option value="Tier2">Tier2</option>
+                    <option value="Admin">Admin</option>
+                </select>
+            </label>
+
+            <section class="form-actions">
+                <button type="submit" class="btn btn-primary full">
+                    Update account
+                </button>
+            </section>
+
+            <section class="form-secondary-actions">
+                <button type="button"
+                        class="link-button"
+                        onclick="location.href='index.html'">
+                    Back to login
+                </button>
+            </section>
+        </form>
+
+        <p class="panel-auth-footnote">
+            This page updates an existing user's username, email, and role
+            in the CSS 305 final project database.
+        </p>
+    </section>
+
+</main>
+
+<footer class="site-footer">
+    © 2025 BoyeLeeNaga Shop · CSS 305 Final Project · Samuel Boye
+</footer>
+
+</body>
+</html>
