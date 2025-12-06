@@ -8,33 +8,30 @@
     Class: CSS 305
     File Name: index.html
     Assignment: Assignment 5
-    Description: Login Form
+    Description: Add a multi-line description of the assignment
 -->
 
 <!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <title>Event Registration</title>
+        <title>User Registration</title>
         <link rel="stylesheet" href="style.css">
     </head>
 
     
     <body id="body">
-        <form id="form" method="post" action ="login.php">
+        <form id="form" method="post" action ="newUser.php">
             
-            <h2 id="title">Log In</h2> <br>
+            <h2 id="title">New User Form</h2> <br>
             
             <section id="section">
-            <label id="top">Username:</label>  
-            <input type="text" name="username"> <br><br>
+            <label id="top">Name:</label>  
+            <input type="text" name="newUser"> <br><br>
             
-            <label>Password:</label> <input type="text" name="password"> <br><br>
-
-            
+            <label>Password:</label> <input type="text" name="newPass"> <br><br>
+           
             <button type="submit">Submit</button>
-            <button type="button" onclick="location.href='newUser.html'">Sign Up</button>
-            <button type="button" onclick="location.href='User.html'">Update</button>
             </section>
         </form>
     </body>
