@@ -10,7 +10,7 @@
     Assignment: Assignment 5
     Description: Login Form
 -->
-
+<?php require "db.php" ?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -26,13 +26,33 @@
             <h2 id="title">User edit Form</h2> <br>
             
             <section id="section">
-            <label id="top">Current Username:</label>  
-            <input type="text" name="currentName"> <br>
+            <label id="top">Current Username:</label> <select name="Users">
+            <option value="">Choose User to Update</option>  
+            
+            <?php
+                $Users = getUsers();
+
+                foreach($Users as $user) {
+                    ?>
+                        <option value ="<? php echo $user['User'] ?>">
+                            <?php echo $user['User'] ?>
+
+                        </option> 
+                }
+            
+
+
+
+            </select> <br>
+
+
             <label id="top">New Username:</label>  
             <input type="text" name="newName"> <br><br>
 
             <label id="top">Current Email:</label>  
             <input type="text" name="currentEmail"> <br>
+
+
             <label id="top">New Email:</label>  
             <input type="text" name="newEmail"> <br><br>
 
