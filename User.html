@@ -16,25 +16,54 @@ Description: Update account form.
     <title>Update account – BoyeLeeNaga Shop</title>
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body class="body">
 
-<main class="auth-page">
+<header class="site-header">
 
+    <span class="brand">
+        <span class="brand-mark"></span>
+        <span class="brand-name">BoyeLeeNaga Shop</span>
+    </span>
+
+    <nav class="nav-links">
+        <a href="index.html" class="nav-link active">Home</a>
+        <a href="catalog.php" class="nav-link">Catalog</a>
+        <a href="suppliers.php" class="nav-link">Suppliers</a>
+        <a href="users.php" class="nav-link active">Users</a>
+    </nav>
+
+</header>
+
+<main class="layout">
+
+    <!-- LEFT HERO SECTION -->
+    <section class="hero">
+        <h1 class="hero-title">Update account</h1>
+
+        <p class="hero-subtitle">
+            Change an existing user’s username, email, or role for this
+            internal parts and suppliers system.
+        </p>
+    </section>
+
+    <!-- RIGHT UPDATE ACCOUNT CARD -->
     <section class="panel panel-auth">
-        <h1 class="panel-title">Update account</h1>
+
+        <h2 class="panel-title">Update account</h2>
         <p class="panel-text">
-            Update your username, email, or role for this internal system.
+            Enter the current information and any new values you want to save.
         </p>
 
         <form method="post" action="userUpdate.php" class="form">
             <label class="field">
                 <span class="field-label">Current username</span>
-                <input type="text" name="currentName" required>
+                <input type="text" name="currentUser" required>
             </label>
 
             <label class="field">
                 <span class="field-label">New username</span>
-                <input type="text" name="newName">
+                <input type="text" name="newUser">
             </label>
 
             <label class="field">
@@ -49,7 +78,7 @@ Description: Update account form.
 
             <label class="field">
                 <span class="field-label">Current role</span>
-                <input type="text" name="currentRole">
+                <input type="text" name="currentRole" required>
             </label>
 
             <label class="field">
@@ -58,6 +87,7 @@ Description: Update account form.
                     <option value="">Select role…</option>
                     <option value="Tier1">Tier1</option>
                     <option value="Tier2">Tier2</option>
+                    <option value="Tier3">Tier3</option>
                     <option value="Admin">Admin</option>
                 </select>
             </label>
@@ -81,12 +111,13 @@ Description: Update account form.
             This page updates an existing user's username, email, and role
             in the CSS 305 final project database.
         </p>
+
     </section>
 
 </main>
 
 <footer class="site-footer">
-    © 2025 BoyeLeeNaga Shop · CSS 305 Final Project · Samuel Boye
+    <span>© BoyeLeeNaga · CSS 305 Final Project · Samuel Boye</span>
 </footer>
 
 </body>

@@ -100,12 +100,13 @@ body.body {
 
 /* Optional single-column wrapper */
 .page-main {
-    flex: 1;
+    flex: 1;                 /* <-- THIS pushes footer down */
     padding: 3rem 8vw;
     display: flex;
     justify-content: center;
     align-items: flex-start;
 }
+
 
 @media (max-width: 900px) {
     .page-main {
@@ -250,57 +251,58 @@ body.body {
 }
 
 /* =====================================================
-   Table Layout
+   Table Layout – Clean and consistent across all pages
    ===================================================== */
 
 .table-wrapper {
     margin-top: 0.75rem;
-    overflow-x: auto;  /* if it still gets too tight, you can scroll */
+    overflow-x: auto;   /* allow horizontal scroll if needed */
+    overflow-y: auto;   /* allow vertical scroll if needed */
+    max-height: 420px;  /* scroll if list is too long */
 }
 
+/* Inner table */
 .table-wrapper table {
     width: 100%;
     border-collapse: collapse;
-    font-size: 0.88rem;
-    table-layout: auto;
+    font-size: 0.9rem;
+    table-layout: fixed;   /* prevents weird stretching + vertical letters */
 }
 
+/* Headings */
 .table-wrapper thead th {
     font-weight: 600;
+    background: #f3f4f6;
+    padding: 0.7rem 1rem;
 }
 
-/* keep headers and cells on one line; no “Suppli er” */
-.table-wrapper th,
+/* Body cells */
 .table-wrapper td {
-    padding: 0.6rem 0.9rem;
-    text-align: left;
-    white-space: nowrap;
-    word-break: keep-all;
+    padding: 0.7rem 1rem;
+    border-bottom: 1px solid #e5e7eb;
+    white-space: nowrap; /* keep row text on a single line */
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
-/* allow first column to wrap (long names) */
+/* Allow first column (names) to wrap normally */
 .table-wrapper td:first-child {
     white-space: normal;
 }
 
-/* Catalog numeric columns (price, qty) right aligned */
-.parts-panel .table-wrapper th:nth-child(4),
-.parts-panel .table-wrapper th:nth-child(5),
-.parts-panel .table-wrapper td:nth-child(4),
-.parts-panel .table-wrapper td:nth-child(5) {
-    text-align: right;
+/* Suppliers table alignment */
+.suppliers-panel th:nth-child(5),
+.suppliers-panel td:nth-child(5) {
+    text-align: center; /* # of parts */
 }
 
-/* Suppliers: centre # of parts, right align last column */
-.suppliers-panel .table-wrapper th:nth-child(5),
-.suppliers-panel .table-wrapper td:nth-child(5) {
-    text-align: center;
+.suppliers-panel th:nth-child(6),
+.suppliers-panel td:nth-child(6),
+.suppliers-panel th:nth-child(7),
+.suppliers-panel td:nth-child(7) {
+    text-align: right; /* Catalog + Delete buttons */
 }
 
-.suppliers-panel .table-wrapper th:nth-child(6),
-.suppliers-panel .table-wrapper td:nth-child(6) {
-    text-align: right;
-}
 
 /* =====================================================
    Footer

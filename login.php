@@ -38,7 +38,9 @@ if ($row && isset($row['password'])) {
     if (password_verify($password, $row['password'])) {
         // Login success
         $_SESSION['username'] = $userName;
-        header("Location: catalog.php");
+
+        // 🔥 Redirect to the dashboard instead of catalog
+        header("Location: dashboard.php");
         exit;
     } else {
         echo "Username or password was incorrect.";
