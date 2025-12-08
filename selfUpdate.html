@@ -1,0 +1,44 @@
+<!--  
+    I certify that the html file I am submitting is all my own work. 
+    None of it is copied from any source or any person. 
+    Signed: Philip Lee
+    Date: 11/25/2025
+    Author: Philip Lee
+    Date: 11/25/2025
+    Class: CSS 305
+    File Name: index.html
+    Assignment: Assignment 5
+    Description: Login Form
+-->
+<?php require "db.php" ?>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>User Editing</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    
+    <body id="body">
+        <form name="form" id="form" method="post" action ="selfUpdate.php">
+            
+            <h2 id="title">Update User Form</h2> <br>
+            
+            <section id="section">
+
+            <label id="top">Current Username:</label>  
+            <input type="text" name="currentUsername"> <br>
+            
+            <label id="top">New Username:</label>  
+            <input type="text" name="newUsername"> <br><br>
+
+            <label id="top">New Email:</label>  
+            <input type="text" name="newEmail"> <br><br>
+
+
+            <button type="submit">Update</button>
+            </section>
+        </form>
+    </body>
+</html>
