@@ -21,13 +21,14 @@
 
     
     <body id="body">
-        <form id="form" method="post" action ="userUpdate.php">
+        <form name="form" id="form" method="post" action ="userUpdate.php">
             
             <h2 id="title">Update User Form</h2> <br>
             
             <section id="section">
             <label id="top">Current Username:</label> 
-            <select name="currentName" onclick = "">
+            <!-- This.Value is on line 39-->
+            <select name="currentName" onclick = "getData(this.value)">
             <option value="">--Choose User to Update--</option>  
             <!-- Dynamic Display of Users in Database -->
             <?php
@@ -68,14 +69,6 @@
 
             <label id="top">New Email:</label>  
             <input type="text" name="newEmail"> <br><br>
-
-            <label id="top">Current Role:</label> <select name="currentRole">
-            <option value="">--Select Current Role Here--</option>    
-            <option>Tier1</option>
-            <option>Tier2</option>
-            <option>Admin</option>    
-            </select>  <br>
-
 
             <label id="top">New Role:</label> <select name="newRole">
             <option value="">--Select New Role Here--</option>    

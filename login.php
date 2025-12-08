@@ -10,27 +10,31 @@
         $stmt = $conn->prepare("SELECT `User_Password` FROM `login` Where Username= ?");
         $stmt->bind_param("s", $userName);
         $stmt->execute();
-        $result = $stmt->get_result(); //mysqli Object
-        $row = $result->fetch_assoc(); //Creates the Row array from mysqli Object
-
-
+        $result = $stmt->get_result(); 
+        $row = $result->fetch_assoc(); 
         
+        //Checks if Username was left empty
+        if (!$row) {
+            echo "Username or Password was Invalid";
+        }
+
         if (password_verify($password, $row['User_Password'])) {
-            // Username Login Database Get
-            $stmt1 = $conn->prepare("SELECT `Username` FROM `login` Where Username= ?");
-            $stmt1->bind_param("s", $userName);
-            $stmt1->execute();
-            $result1 = $stmt1->get_result(); //mysqli Object
-            $row1 = $result1->fetch_assoc(); //Creates the Row array from mysqli Object
-            
-            //User Database Get
+            //Get User from users DB
             $stmt2 = $conn->prepare("SELECT `User` FROM `users` Where User= ?");
             $stmt2->bind_param("s", $userName);
             $stmt2->execute();
             $result2 = $stmt2->get_result(); 
-            $row2 = $result2->fetch_assoc(); 
+            $row2 = $result2->fetch_assoc();
+            
+            //Get role from users DB
+            $stmt3 = $conn->prepare("SELECT `role` FROM `users` Where User= ?");
+            $stmt3->bind_param("s", $userName);
+            $stmt3->execute();
+            $result3 = $stmt3->get_result(); 
+            $row3 = $result3->fetch_assoc();
 
-            if ($row1['Username'] == $row2['User']) {
+            //Heads to Admin page if role is Admin and is in both users/login DB
+            if ($row2 && $row3['role'] == 'Admin') {
                 header ("Location: Admin.html");
                 return;
             }
