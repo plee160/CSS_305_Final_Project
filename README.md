@@ -1,120 +1,102 @@
-CSS 305 – Final Project: Car Parts Catalog System
-Student: Samuel Boye
-Course: CSS 305 – Web Development
-Project Type: Full-Stack PHP + MySQL Application
-Hosting: Hostinger (Live Deployment)
-📌 Project Overview
+CSS_305_Final_Project
 
-This project is a full-stack web application demonstrating CRUD operations, authentication, secure data handling, and MySQL database integration.
-The system is designed for employees and managers of a car parts store who need to manage, search, and update parts and supplier information.
+Points Breakdown:
+• Project: 75 points
+• Presentation and Video: 20 points
+• Peer Evaluations: 5-point
 
-This application includes:
+Project Overview
 
-User authentication (login, logout, role handling)
+This is a full-stack web application that demonstrates CRUD functionality, authentication, database integration, secure data handling, and deployment on Hostinger.
 
-Catalog of car parts
+The application includes separate frontend and backend components, server-side validation, prepared statements for safe SQL execution, dynamic database operations, and complete documentation as required for the final project.
 
-Supplier management
+The 5 W's
 
-Add/Edit/Delete parts
+Who: This application is designed for employees and managers of a car parts store, including inventory clerks, counter staff, and store managers who need quick access to stock and product information.
 
-Server-side validation
+What: The system will be a web-based inventory management application or catalog that allows users to view, add, edit, and delete car parts, track stock levels, search for specific items, and manage supplier relationships. It provides a centralized location to store and update all inventory-related data.
 
-Secure SQL operations using prepared statements
+When: The system is used daily during store operations whenever staff need to check stock, receive shipments, adjust quantities, or assist customers by looking up parts.
 
-Dashboard with quick summaries
+Where: The application will be hosted on Hostinger, allowing authorized users to access it from store computers, office desktops, or approved remote locations.
 
-Hostinger deployment
+Why: Car parts stores handle extensive inventories with frequent stock changes. Manual tracking can lead to errors, shortages, and lost sales. This system streamlines inventory control, reduces mistakes, improves efficiency, provides real-time stock visibility, and supports better decision-making for restocking and sales operations.
 
-📌 The 5 W’s
-Who
+Project Goals
 
-Employees, managers, and inventory clerks working at a car parts shop who need fast access to product and stock information.
+• Make sure we implement CRUD operations
+• Capture user input and store it in a relational SQL database
+• Retrieve data using SQL SELECT statements and display results dynamically on webpages
+• Use authentication to protect pages that are restricted
+• Test and debug security issues throughout development (SQL injection, CSRF protection, password hashing, validation)
+• Host the functioning web application using Hostinger
+• Make sure everything is documented with a transparent development process
 
-What
+Repository
 
-A web-based internal catalog system that allows users to view, add, edit, and remove parts; track suppliers; and maintain accurate inventory data.
+This repository will include:
 
-When
+HTML, CSS, and JavaScript frontend files
 
-Used during daily store operations to track stock, update items, and assist customers.
+Backend server files and PHP handlers
 
-Where
+Validator scripts
 
-Hosted on Hostinger. Can be accessed on store computers, office desktops, and approved remote devices.
+Database structure files and schema
 
-Why
+Layout drawings using Lucidchart
 
-Manual inventory tracking is error-prone. This system streamlines operations, reduces mistakes, improves stock visibility, and supports better restocking and sales decisions.
+Database diagram
 
-📌 Project Goals
+Documentation file/folder
 
-Implement complete CRUD functionality
+Deployment details
 
-Capture and validate user input
+Validator scripts
 
-Store data securely in a MySQL database
+Development Notes
 
-Retrieve and display dynamic data using PHP
-
-Implement authentication and role-based access
-
-Debug and test for security (SQL injection, CSRF)
-
-Deploy a functioning system to Hostinger
-
-Document development progress clearly
-
-📌 Recommended Repository Structure (Best Practice)
-
-This is the optimized layout for a professional, clean PHP project.
-(It improves your old structure while keeping all your files.)
+This readme will be updated regularly throughout the project to show progress, changes, and final implementation details.
 
 /your-project-root
+
 │
-├── README.md                  ← Full documentation
-├── styles.css                 ← Global stylesheet
-├── index.html                 ← Public landing/login page
+
+├── index.html
+├── styles.css
+├── Readme.docx
+
 │
-├── /images                    ← UI images, logos, assets
+
+├── /images
+
 │
-├── /designs                   ← Diagrams, mockups, Lucidchart exports
-│   ├── database-schema.png
-│   └── wireframes/
+
+├── /designs
+
 │
-├── /public                    ← Public-facing pages
-│   ├── catalog.php
-│   ├── suppliers.php
-│   ├── users.php
-│   ├── part-details.php
-│   ├── newUser.html
-│   ├── login.php
-│   └── logout.php
+
+├── /html
+│ ├── catalog.php
+│ ├── part-details.php
+│ ├── add-part.php
+│ ├── edit-part.php
+│ ├── delete-part.php
+│ ├── suppliers.php
+│ ├── login.php
+│ └── logout.php
+
 │
-├── /parts                     ← CRUD pages for parts
-│   ├── part-create.php
-│   ├── part-edit.php
-│   └── part-delete.php
+
+├── /backend
+│ ├── db.php
+│ ├── add_part_handler.php
+│ ├── update_part_handler.php
+│ ├── delete_part_handler.php
+│ ├── authenticate.php
+│ └── session_check.php
+
 │
-├── /suppliers
-│   ├── supplier-edit.php
-│   └── supplier-delete.php
-│
-├── /account
-│   ├── account_edit.php
-│   ├── change_password.php
-│   └── deleteUser.php
-│
-├── /backend                   ← All backend PHP logic
-│   ├── db.php                 ← Database connection
-│   ├── session_check.php
-│   ├── csrf.php
-│   ├── authenticate.php
-│   ├── newUser.php
-│   ├── userUpdate.php
-│   ├── part-create-handler.php
-│   ├── part-edit-handler.php
-│   ├── part-delete-handler.php
-│   └── supplier-edit-handler.php
-│
-└── /validators                ← Server-side validation helpers
+
+└── /validators
