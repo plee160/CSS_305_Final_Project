@@ -46,35 +46,72 @@ This repository will include:
 # Development Notes
 This readme will be updated regularly throughout the project to show progress, changes, and final implementation details.
 
-/your-project-root
-
+/project-root
 │
-├── index.html
+
+├── index.php
+
 ├── styles.css
-├── Readme.docx
-│
-├── /images
-│
-├── /designs
-│
-├── /html
-│   ├── catalog.php
-│   ├── part-details.php
-│   ├── add-part.php
-│   ├── edit-part.php
-│   ├── delete-part.php
-│   ├── suppliers.php
-│   ├── login.php
-│   └── logout.php
-│
-├── /backend
-│   ├── db.php
-│   ├── add_part_handler.php
-│   ├── update_part_handler.php
-│   ├── delete_part_handler.php
-│   ├── authenticate.php
-│   └── session_check.php
-│
-└── /validators
 
-here is waht the folder structure might look like. it is likely to change as we progress
+├── User.html
+
+├── newUser.html
+
+│
+
+├── /auth
+
+│   ├── login.php
+
+│   ├── logout.php
+
+│   ├── newUser.php
+
+│   ├── account_edit.php
+
+│   ├── change_password.php
+
+│   ├── deleteUser.php
+
+│   └── userUpdate.php
+
+│
+
+├── /dashboard
+
+│   ├── dashboard.php
+
+│   └── users.php
+
+│
+
+├── /parts
+
+│   ├── parts-details.php
+
+│   ├── part-create.php
+
+│   ├── part-edit.php
+
+│   └── part-delete.php
+
+│
+
+├── /suppliers
+
+│   ├── suppliers.php
+
+│   └── supplier-edit.php
+
+│
+
+├── /backend
+
+│   ├── db.php
+
+│   ├── session_check.php
+
+│   ├── csrf.php
+
+│   └── README_backend.txt   (optional explanation file)
+
