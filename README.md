@@ -1,107 +1,120 @@
-# CSS_305_Final_Project
-Points Breakdown:
-• Project: 75 points
-• Presentation and Video: 20 points
-• Peer Evaluations: 5-point
+CSS 305 – Final Project: Car Parts Catalog System
+Student: Samuel Boye
+Course: CSS 305 – Web Development
+Project Type: Full-Stack PHP + MySQL Application
+Hosting: Hostinger (Live Deployment)
+📌 Project Overview
 
-# Project Overview
+This project is a full-stack web application demonstrating CRUD operations, authentication, secure data handling, and MySQL database integration.
+The system is designed for employees and managers of a car parts store who need to manage, search, and update parts and supplier information.
 
-- This is a full-stack web application that demonstrates CRUD functionality, authentication, database integration, and secure data handling within a website that will be hosted on Hostinger.
-- The application will include separate frontend and backend components, server-side validation, dynamic database operations, and complete documentation.
+This application includes:
 
-# The 5 W's
-- **Who**: This application is designed for employees and managers of a car parts store, including inventory clerks, counter staff, and store managers who need quick access to stock and product information
-- **What**: The system will be a web based inventory management application or catalog that allows users to view, add, edit, and delete car parts, track stock levels, search for specific items, and manage supplier relationships. It provides a centralized location to store and update all inventory related data
-- **When**: The system is used daily during store operations whenever staff need to check stock, receive shipments, adjust quantities, or assist customers by looking up parts
-- **Where**: The application will be hosted on Hostinger, allowing authorized users to access it from store computers, office desktops, or approved remote locations
-- **Why**: Car parts stores handle extensive inventories with frequent stock changes. Manual tracking can lead to errors, shortages, and lost sales. This system streamlines inventory control, reduces mistakes, improves efficiency, provides real time stock visibility, and supports better decision making for restocking and sales operations
+User authentication (login, logout, role handling)
 
-# Project Goals
-• Make sure we implement CRUD operations
+Catalog of car parts
 
-• Capture user input and store it in a relational SQL database
+Supplier management
 
-• Retrieve data using SQL SELECT statements and display results dynamically on webpages
+Add/Edit/Delete parts
 
-• Use authentication to protect pages that are restricted
+Server-side validation
 
-• Test and debug security issues throughout development
+Secure SQL operations using prepared statements
 
-• Host the functioning web application using Hostinger
+Dashboard with quick summaries
 
-• Make sure everything is documented with a transparent development process
+Hostinger deployment
 
-# Repository
-This repository will include:
-- HTML, CSS, and JavaScript frontend files
-- Backend server files
-- Validator scripts
-- Database structure files
-- layout drawings using Lucidchart
-- Database diagram
-- Documentation file/folder
-- Deployment details
-- Validator scripts
+📌 The 5 W’s
+Who
 
-# Development Notes
-This readme will be updated regularly throughout the project to show progress, changes, and final implementation details.
+Employees, managers, and inventory clerks working at a car parts shop who need fast access to product and stock information.
+
+What
+
+A web-based internal catalog system that allows users to view, add, edit, and remove parts; track suppliers; and maintain accurate inventory data.
+
+When
+
+Used during daily store operations to track stock, update items, and assist customers.
+
+Where
+
+Hosted on Hostinger. Can be accessed on store computers, office desktops, and approved remote devices.
+
+Why
+
+Manual inventory tracking is error-prone. This system streamlines operations, reduces mistakes, improves stock visibility, and supports better restocking and sales decisions.
+
+📌 Project Goals
+
+Implement complete CRUD functionality
+
+Capture and validate user input
+
+Store data securely in a MySQL database
+
+Retrieve and display dynamic data using PHP
+
+Implement authentication and role-based access
+
+Debug and test for security (SQL injection, CSRF)
+
+Deploy a functioning system to Hostinger
+
+Document development progress clearly
+
+📌 Recommended Repository Structure (Best Practice)
+
+This is the optimized layout for a professional, clean PHP project.
+(It improves your old structure while keeping all your files.)
 
 /your-project-root
-
 │
-
-├── index.html
-
-├── styles.css
-
-├── Readme.docx
-
+├── README.md                  ← Full documentation
+├── styles.css                 ← Global stylesheet
+├── index.html                 ← Public landing/login page
 │
-
-├── /images
-
+├── /images                    ← UI images, logos, assets
 │
-
-├── /designs
-
+├── /designs                   ← Diagrams, mockups, Lucidchart exports
+│   ├── database-schema.png
+│   └── wireframes/
 │
-
-├── /html
-
+├── /public                    ← Public-facing pages
 │   ├── catalog.php
-
-│   ├── part-details.php
-
-│   ├── add-part.php
-
-│   ├── edit-part.php
-
-│   ├── delete-part.php
-
 │   ├── suppliers.php
-
+│   ├── users.php
+│   ├── part-details.php
+│   ├── newUser.html
 │   ├── login.php
-
 │   └── logout.php
-
 │
-
-├── /backend
-
-│   ├── db.php
-
-│   ├── add_part_handler.php
-
-│   ├── update_part_handler.php
-
-│   ├── delete_part_handler.php
-
+├── /parts                     ← CRUD pages for parts
+│   ├── part-create.php
+│   ├── part-edit.php
+│   └── part-delete.php
+│
+├── /suppliers
+│   ├── supplier-edit.php
+│   └── supplier-delete.php
+│
+├── /account
+│   ├── account_edit.php
+│   ├── change_password.php
+│   └── deleteUser.php
+│
+├── /backend                   ← All backend PHP logic
+│   ├── db.php                 ← Database connection
+│   ├── session_check.php
+│   ├── csrf.php
 │   ├── authenticate.php
-
-│   └── session_check.php
-
+│   ├── newUser.php
+│   ├── userUpdate.php
+│   ├── part-create-handler.php
+│   ├── part-edit-handler.php
+│   ├── part-delete-handler.php
+│   └── supplier-edit-handler.php
 │
-
-└── /validators
-
-here is waht the folder structure might look like. it is likely to change as we progress
+└── /validators                ← Server-side validation helpers
